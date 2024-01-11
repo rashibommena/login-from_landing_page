@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(image/text.jbg.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: sans-serif ;
+}
+.container{
+    position: relative;
+    margin-top: 100px;
+    width: 450px;
+    height: auto;
+    background: rgb(175, 242, 245);
+    border-radius: 5px;
+}
+.label{
+    padding: 20px 130px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #130f40;
+}
+.login{
+    padding: 20px 40px;
+}
+.login .font{
+    font-size: 18px;
+    color: #130f40;
+    margin: 5px 0;
+}
+.login input{
+    height: 40px;
+    width: 350px;
+    padding: 0 5px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid silver;
+}
+.login .font1{
+    margin-top: 30px;
+}
+.login button{
+    margin: 45px 0 30px 0;
+    height: 45px;
+    width: 365px;
+    font-size: 20px;
+    color: rgb(52, 61, 68);
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgb(240, 196, 232);
+    border-radius: 3px;
+    border: 1px solid #3949AB;
+    transition: .5s;
+}
+.login button:hover{
+    background: rgb(175, 242, 245);
+}
+.login #email_error,
+.login #pass_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18px;
+    color: #ec7d7d;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #f88f8ff8;
+    display: none;
+}

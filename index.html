@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="label">Login form</h1>
+        <form class="login" action="home.html" method="post" name="form" onsubmit= "return validated()">
+            <div class="font">Email </div>
+            <input autocomplete="off" type="text" name="email" placeholder="Enter email">
+            <div id="email_error">Please fill up your Email </div>
+            <div class="font1">password</div>
+            <input type="password" name="password" placeholder=" Enter password">
+            <div id="pass_error">Please fill up your password</div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+       var email = document.forms['form']['email'];
+       var password = document.forms['form']['password'];
+
+       var email_error = document.getElementById('email_error');
+       var pass_error = document.getElementById('pass_error');
+
+       email.addEventListener('textInput', email_verify)
+       password.addEventListener('textInput', pass_verify)
+
+       function validated(){
+          if (email.value.length < 9) {
+              email.style.border = "1px solid red";
+              email_error.style.display = "block";
+              email.focus();
+              return false;
+          }
+          if (password.value.length < 6) {
+              password.style.border = "1px solid red";
+              pass_error.style.display = "block";
+              password.focus();
+              return false;
+          }
+       }
+        
+       function email_verify(){
+        if (email.value.length >= 9) {
+            email.style.border = "1px solid silver";
+            email_error.style.display = "none";
+            return true;
+        }
+    }
+        function pass_verify(){
+        if (password.value.length >= 6) {
+            password.style.border = "1px solid silver";
+            pass_error.style.display = "none";
+            return true;
+        }
+       }
+</script>
+</body>
+</html>
